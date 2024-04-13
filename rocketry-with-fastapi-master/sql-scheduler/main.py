@@ -3,7 +3,8 @@ from rocketry import Rocketry
 from rocketry.conds import every
 import logging
 
-app = Rocketry(config={"task_execution": "async"})
+app = Rocketry(config=
+               {"task_execution": "async"})
 
 @app.task(every('10 seconds', based="finish"))
 async def do_permanently():
